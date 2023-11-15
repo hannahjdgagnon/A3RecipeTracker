@@ -1,14 +1,14 @@
 /* public/index.css */
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #faf3f3;
+  background-color: #faeee7;
 }
 
 header {
-  background-color: #d8e2dc;
-  color: #302626;
+  background-color: #ffc6c7;
+  color: #594a4e;
   text-align: center;
   padding: 1rem;
 }
@@ -18,9 +18,10 @@ section {
   margin: 0 auto;
   margin-top: 15px;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #fffffe;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #594a4e;
 }
 
 form {

@@ -1,19 +1,22 @@
 <!-- views/index.ejs -->
+<!-- html for recipe page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recipe Website</title>
+  <!-- link css -->
   <link rel="stylesheet" href="/css/index.css">
 </head>
 
-
+<!-- Body -->
 <body>
   <header>
     <h1>Recipe Tracker</h1>
   </header>
 
+<!-- Recipe section -->
   <section id="recipe-form">
     <h2>Add a New Recipe</h2>
     <form action="/add" method="post">
@@ -23,16 +26,14 @@
       <label for="ingredients">Ingredients:</label>
       <textarea id="ingredients" name="ingredients" required></textarea>
 
-      <label for="instructions">Instructions:</label>
+      <label for="instructions">Instructions/Description:</label>
       <textarea id="instructions" name="instructions" required></textarea>
 
       <button type="submit">Add Recipe</button>
     </form>
   </section>
 
-<!-- views/index.ejs -->
-<!-- ... (existing code) ... -->
-
+<!--List of added recipes -->
 <section id="recipe-list">
   <h2>Recipe List</h2>
   <ul>
@@ -51,9 +52,5 @@
     <% }); %>
   </ul>
 </section>
-
-<!-- ... (existing code) ... -->
-
-
 </body>
 </html>
