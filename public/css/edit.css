@@ -1,4 +1,4 @@
-/* public/edit.css */
+/*edit css page*/
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -6,6 +6,7 @@ body {
   background-color: #f7f4f1;
 }
 
+/*header*/
 header {
   background-color: #d8e2dc;
   color: #302626;
@@ -13,6 +14,7 @@ header {
   padding: 1rem;
 }
 
+/*section*/
 section {
   max-width: 700px;
   margin: 0 auto;
@@ -23,6 +25,7 @@ section {
   margin-top: 20px;
 }
 
+/*form stuff*/
 form {
   display: grid;
   gap: 15px;
@@ -32,6 +35,7 @@ label {
   font-size: 15px;
 }
 
+/*input area*/
 input,
 textarea {
   width: 90%;
@@ -41,6 +45,7 @@ textarea {
   caret-color: auto;
 }
 
+/*button*/
 button {
   background-color: #8eaa91;
   color: #ffffff;
@@ -52,6 +57,7 @@ button {
   font-size: 18px;
 }
 
+/*change button colour*/
 button:hover {
   background-color: #739072;
 }

@@ -1,11 +1,11 @@
 const Recipe = require("../models/recipe.js");
 
-// Define your routes and CRUD operations here
+// routes CRUD methods
 const express = require("express");
 const router = express.Router();
 const Recipe = require("../models/recipe.js");
 
-// INDEX route - Display a list of all recipes
+// INDEX route
 router.get("/recipes", async (req, res) => {
   try {
     const recipes = await Recipe.find({});
@@ -16,12 +16,12 @@ router.get("/recipes", async (req, res) => {
   }
 });
 
-// NEW route - Show a form to create a new recipe
+//show form to create a new recipe
 router.get("/recipes/new", (req, res) => {
   res.render("new");
 });
 
-// CREATE route - Add a new recipe to the database
+// add a new recipe to the database
 router.post("/recipes", async (req, res) => {
   try {
     await Recipe.create(req.body.recipe);
@@ -32,7 +32,7 @@ router.post("/recipes", async (req, res) => {
   }
 });
 
-// SHOW route - Display information about a specific recipe
+// display information about specific recipe
 router.get("/recipes/:id", async (req, res) => {
   try {
     const recipe = await Recipe.findById(req.params.id);
@@ -43,7 +43,7 @@ router.get("/recipes/:id", async (req, res) => {
   }
 });
 
-// EDIT route - Show a form to edit a specific recipe
+// show form to editspecific recipe
 router.get("/recipes/:id/edit", async (req, res) => {
   try {
     const recipe = await Recipe.findById(req.params.id);
@@ -54,7 +54,7 @@ router.get("/recipes/:id/edit", async (req, res) => {
   }
 });
 
-// UPDATE route - Update a specific recipe in the database
+// update specific recipe in the database
 router.put("/recipes/:id", async (req, res) => {
   try {
     await Recipe.findByIdAndUpdate(req.params.id, req.body.recipe);
@@ -65,7 +65,7 @@ router.put("/recipes/:id", async (req, res) => {
   }
 });
 
-// DELETE route - Remove a specific recipe from the database
+//remove a specific recipe from the database
 router.delete("/recipes/:id", async (req, res) => {
   try {
     await Recipe.findByIdAndRemove(req.params.id);
